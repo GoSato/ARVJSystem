@@ -85,7 +85,7 @@ public class DepthImageComposition : MonoBehaviour
     private ARCameraBackground _arCameraBackground;
 
     [SerializeField]
-    private Material _effectMaterial;
+    private Material _peoppleOcclusionMat;
 
     [SerializeField]
     Text m_ImageInfo;
@@ -115,10 +115,12 @@ public class DepthImageComposition : MonoBehaviour
         }
     }
 
-    private void Awake()
+    private void Start()
     {
         m_RawImageBackground.texture = _backgroundRT;
         _arCameraBackground = FindObjectOfType<ARCameraBackground>();
+        Camera.main.depthTextureMode |= DepthTextureMode.Depth;
+
     }
 
     void Update()
@@ -157,10 +159,22 @@ public class DepthImageComposition : MonoBehaviour
         /// non-disabled value.
         m_RawImageDepth.texture = humanDepth;
 
-        if (_arCameraBackground != null)
+        _peoppleOcclusionMat.SetTexture("_BackgroundTex", _backgroundRT);
+        _peoppleOcclusionMat.SetTexture("_StencilTex", humanStencil);
+        _peoppleOcclusionMat.SetTexture("_DepthTex", humanDepth);
+    }
+
+    private void LateUpdate()
+    {
+        if (_arCameraBackground.material != null)
         {
             // Blit screen display to render texture
             Graphics.Blit(null, _backgroundRT, _arCameraBackground.material);
         }
+    }
+
+    private void OnRenderImage(RenderTexture source, RenderTexture destination)
+    {
+        Graphics.Blit(source, destination, _peoppleOcclusionMat);
     }
 }

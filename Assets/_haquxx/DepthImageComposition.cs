@@ -121,6 +121,9 @@ public class DepthImageComposition : MonoBehaviour
         _arCameraBackground = FindObjectOfType<ARCameraBackground>();
         Camera.main.depthTextureMode |= DepthTextureMode.Depth;
 
+        _peoppleOcclusionMat.SetFloat("_Width", Screen.width);
+        _peoppleOcclusionMat.SetFloat("_Height", Screen.height);
+        Debug.LogFormat("Screen Width : Height, {0}:{1}", Screen.width, Screen.height);
     }
 
     void Update()

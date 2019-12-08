@@ -16,8 +16,8 @@
             CGPROGRAM
             #pragma vertex vert
             #pragma fragment frag
-            #pragma shader_feature PEOPPLE BACKGROUND
-            #pragma multi_compile _ MONOCHROME NEGAPOSI PASTEL EDGE MOSAIC COLORBALANCE
+            #pragma multi_compile _ PEOPPLE BACKGROUND
+            #pragma multi_compile _ MONOCHROME NEGAPOSI PASTEL EDGE MOSAIC COLORBALANCE RGBSHIFT
 
             #include "UnityCG.cginc"
 
@@ -52,6 +52,10 @@
 
             float gray (fixed4 c) {
                 return 0.2126 * c.r + 0.7152 * c.g + 0.0722 * c.b;
+            }
+
+            float rand(float2 co){
+                return frac(sin(dot(co.xy ,float2(12.9898,78.233))) * 43758.5453);
             }
 
             v2f vert (appdata v)
@@ -110,6 +114,13 @@
                 effectedCol = tex2D(Tex, uv2);
              #elif COLORBALANCE
                 effectedCol = fixed4(effectedCol.r*0.7, effectedCol.g*0.5, effectedCol.b, 1);
+             #elif RGBSHIFT
+                float2 uv2 = i.uv;
+                float random = rand(_Time.y);
+                float r = tex2D(Tex, uv2 + 0.1 * frac(_Time.y + random)).r;
+                float g = tex2D(Tex, uv2 + 0.05 * frac(_Time.y + random)).g;
+                float b = tex2D(Tex, uv2 - 0.1 * frac(_Time.y + random)).b;
+                effectedCol = fixed4(r, g, b, 1);
              #endif
                  // ***************************************************************
 

@@ -7,9 +7,9 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PeoppleOcclusion
-  m_Shader: {fileID: 4800000, guid: 4bd3662860fa946d39c4619b838266e5, type: 3}
-  m_ShaderKeywords: COLOR MONOCHROME PASTEL PEOPPLE _APPLY_REVERSE_ON
+  m_Name: Scanline
+  m_Shader: {fileID: 4800000, guid: 4fa6903a4534444a1892738d478c4e5e, type: 3}
+  m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -24,6 +24,12 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _EdgeThreshold: 0.5
-    - _MosaicScale: 26.33
-    m_Colors: []
+    - _Glossiness: 0.694
+    - _IntervalSec: 2.67
+    - _LineSize: 0.1
+    - _LineSpeed: 0.5
+    - _Metallic: 0.783
+    - _TrajectorySize: 0.52
+    m_Colors:
+    - _LineColor: {r: 1, g: 1, b: 1, a: 1}
+    - _TrajectoryColor: {r: 0, g: 0, b: 0, a: 1}

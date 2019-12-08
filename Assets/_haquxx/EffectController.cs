@@ -15,7 +15,24 @@ public class EffectController : MonoBehaviour
     [SerializeField]
     private Toggle _toggle;
 
-    private int _index = 1;
+    private int _index = 3;
+
+    [SerializeField]
+    private bool _auto = false;
+
+    [SerializeField]
+    private Toggle _autoToggle;
+
+    [SerializeField]
+    private float _interval = 1.0f;
+
+    [SerializeField]
+    private GameObject _arObjects;
+
+    [SerializeField]
+    private Toggle _arToggle;
+
+    private float _elapsedTime;
 
     private enum EffectType
     {
@@ -26,14 +43,32 @@ public class EffectController : MonoBehaviour
         EDGE,
         MOSAIC,
         COLORBALANCE,
+        RGBSHIFT,
     }
 
     // Start is called before the first frame update
     void Start()
     {
         _toggle.onValueChanged.AddListener(OnToggleValueChanged);
-        _mat.EnableKeyword("BACKGROUND");
-        _mat.EnableKeyword("MONOCHROME");
+        _mat.EnableKeyword("PEOPPLE");
+        _mat.DisableKeyword("MONOCHROME");
+        _mat.EnableKeyword("PASTEL");
+
+        _autoToggle.onValueChanged.AddListener(ChangeAuto);
+        _arToggle.onValueChanged.AddListener(ChangeAR);
+    }
+
+    private void Update()
+    {
+        if(_auto)
+        {
+            _elapsedTime += Time.deltaTime;
+            if(_elapsedTime >= _interval)
+            {
+                ChangeEffect(UnityEngine.Random.Range(1, Enum.GetNames(typeof(EffectType)).Length));
+                _elapsedTime = 0f;
+            }
+        }
     }
 
     private void OnToggleValueChanged(bool isOn)
@@ -51,7 +86,17 @@ public class EffectController : MonoBehaviour
         }
     }
 
-    public void OnEffectClick(int index)
+    private void ChangeAuto(bool isOn)
+    {
+        _auto = isOn;
+    }
+
+    private void ChangeAR(bool isOn)
+    {
+        _arObjects.SetActive(isOn);
+    }
+
+    public void ChangeEffect(int index)
     {
         var type = Enum.GetName(typeof(EffectType), _index);
         Debug.Log("Disable " + type);
@@ -84,6 +129,10 @@ public class EffectController : MonoBehaviour
             case 6:
                 Debug.Log("COLORBALANCE");
                 _mat.EnableKeyword("COLORBALANCE");
+                break;
+            case 7:
+                Debug.Log("RGBSHIFT");
+                _mat.EnableKeyword("RGBSHIFT");
                 break;
         }
         _index = index;

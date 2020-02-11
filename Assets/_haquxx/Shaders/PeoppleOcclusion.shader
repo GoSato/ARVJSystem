@@ -68,14 +68,19 @@
 
             fixed4 frag (v2f i) : SV_Target
             {
+                fixed4 effectedCol = fixed4(0,0,0,0);
+                fixed4 col = fixed4(0,0,0,0);
+                sampler2D Tex;
                 #ifdef BACKGROUND // 背景にエフェクトをかける
-                    fixed4 col = tex2D(_BackgroundTex, i.uv);
-                    fixed4 effectedCol = tex2D(_MainTex, i.uv);
-                    sampler2D Tex = _MainTex;
+                    col = tex2D(_BackgroundTex, i.uv);
+                    effectedCol = tex2D(_MainTex, i.uv);
+                    Tex = _MainTex;
                 #elif PEOPPLE
-                    fixed4 col = tex2D(_MainTex, i.uv);
-                    fixed4 effectedCol = tex2D(_BackgroundTex, i.uv);
-                    sampler2D Tex = _BackgroundTex;
+                    col = tex2D(_MainTex, i.uv);
+                    effectedCol = tex2D(_BackgroundTex, i.uv);
+                    Tex = _BackgroundTex;
+                #else
+                    Tex = _MainTex;
                 #endif
                 
                 // Effect *********************************************************
@@ -150,6 +155,8 @@
                     return col;
                 #elif PEOPPLE
                     return effectedCol;
+                #else
+                    return col;
                 #endif
                 }
                 // Render NoMaskArea
@@ -159,6 +166,8 @@
                     return effectedCol;
                 #elif PEOPPLE
                     return col;
+                #else
+                    return effectedCol;
                 #endif
                 }
             }

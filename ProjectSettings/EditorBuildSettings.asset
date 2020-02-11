@@ -92,9 +92,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/UX/SampleUXScene.unity
     guid: 3b42d67a72bbc4004bf713db0e312326
-  - enabled: 1
+  - enabled: 0
     path: Assets/_haquxx/HumanSegmentationImages_VJ.unity
     guid: 5e88f629f91544308b12f40d7349518c
+  - enabled: 1
+    path: Assets/_haquxx/NetworkARVJSystem.unity
+    guid: 304b1c05eb59b4aa68fb5256221d11f0
   m_configObjects:
     com.unity.xr.arkit.PlayerSettings: {fileID: 11400000, guid: 2d5fb8e61571b4e3897f221189089fd6,
       type: 2}

@@ -39,6 +39,8 @@ public class OSCReceiver : MonoBehaviour
     private String _debugText;
     private Queue<OSCData> _queue;
 
+    public Action<OSCData> OnUpdate;
+
     private void OnEnable()
     {
         _queue = new Queue<OSCData>();
@@ -81,6 +83,11 @@ public class OSCReceiver : MonoBehaviour
 
         lock (_queue)
             data = _queue.Dequeue();
+
+        if (OnUpdate != null)
+        {
+            OnUpdate.Invoke(data);
+        }
 
         _debugText = String.Format("{0}:{1} : {2} : {3}", DateTime.Now, DateTime.Now.Millisecond, data.Address, data.Value);
         _text.text = _debugText;

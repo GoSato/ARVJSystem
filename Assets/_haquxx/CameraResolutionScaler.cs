@@ -17,7 +17,10 @@ public class CameraResolutionScaler : MonoBehaviour
 
     private void OnDestroy()
     {
-        Camera.main.rect = _originalRect;
+        if (Camera.main != null)
+        {
+            Camera.main.rect = _originalRect;
+        }
     }
 
     private void OnPreRender()

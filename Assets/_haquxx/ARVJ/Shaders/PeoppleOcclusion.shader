@@ -141,8 +141,10 @@
                 if(stencil < 0.9)
                 {
                 #ifdef BACKGROUND
+                    effectedCol = fixed4(0,0,0,1);
                     return effectedCol;
                 #elif PEOPPLE
+                    col = fixed4(0,0,0,1);
                     return col;
                 #endif
                 }

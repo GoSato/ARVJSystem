@@ -87,7 +87,7 @@
              #elif MONOCHROME
                 float monochrome = dot(effectedCol.rgb, monochromeScale);
                 //fixed monochrome = (effectedCol.r + effectedCol.g + effectedCol.b) / 3;
-                //effectedCol = fixed4(monochrome, monochrome, monochrome, 1);
+                effectedCol = fixed4(monochrome, monochrome, monochrome, 1);
              #elif NEGAPOSI
                 effectedCol = fixed4(1-effectedCol.r, 1-effectedCol.g, 1-effectedCol.b, 1);
              #elif PASTEL

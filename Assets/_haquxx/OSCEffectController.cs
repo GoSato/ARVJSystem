@@ -24,12 +24,16 @@ public class OSCEffectController : MonoBehaviour
         switch (data.Address)
         {
             case "/1/recenable":
-                index = 1;
+                index = 0;
                 break;
             case "/1/input":
-                index = 2;
+                index = 1;
                 break;
             case "/1/solo":
+                index = 2;
+                break;
+
+            case "/1/mute":
                 index = 3;
                 break;
         }

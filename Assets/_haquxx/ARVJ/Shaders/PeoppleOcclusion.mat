@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: PeoppleOcclusion
   m_Shader: {fileID: 4800000, guid: 4bd3662860fa946d39c4619b838266e5, type: 3}
-  m_ShaderKeywords: BACKGROUND COLOR EDGE PASTEL PEOPPLE _APPLY_REVERSE_ON
+  m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0

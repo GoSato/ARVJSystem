@@ -16,8 +16,8 @@
             CGPROGRAM
             #pragma vertex vert
             #pragma fragment frag
-            #pragma multi_compile _ PEOPPLE BACKGROUND
-            #pragma multi_compile _ MONOCHROME NEGAPOSI PASTEL EDGE MOSAIC COLORBALANCE RGBSHIFT
+            #pragma multi_compile PEOPPLE BACKGROUND
+            #pragma multi_compile NONE MONOCHROME NEGAPOSI PASTEL EDGE MOSAIC COLORBALANCE RGBSHIFT
 
             #include "UnityCG.cginc"
 
@@ -79,15 +79,15 @@
                     col = tex2D(_MainTex, i.uv);
                     effectedCol = tex2D(_BackgroundTex, i.uv);
                     Tex = _BackgroundTex;
-                #else
-                    Tex = _MainTex;
                 #endif
                 
-                // Effect *********************************************************
-             #ifdef MONOCHROME
+// Effect *********************************************************
+             #ifdef NONE
+                // Notiong
+             #elif MONOCHROME
                 float monochrome = dot(effectedCol.rgb, monochromeScale);
                 //fixed monochrome = (effectedCol.r + effectedCol.g + effectedCol.b) / 3;
-                effectedCol = fixed4(monochrome, monochrome, monochrome, 1);
+                //effectedCol = fixed4(monochrome, monochrome, monochrome, 1);
              #elif NEGAPOSI
                 effectedCol = fixed4(1-effectedCol.r, 1-effectedCol.g, 1-effectedCol.b, 1);
              #elif PASTEL
@@ -157,8 +157,6 @@
                     return col;
                 #elif PEOPPLE
                     return effectedCol;
-                #else
-                    return col;
                 #endif
                 }
                 // Render NoMaskArea
@@ -168,8 +166,6 @@
                     return effectedCol;
                 #elif PEOPPLE
                     return col;
-                #else
-                    return effectedCol;
                 #endif
                 }
             }

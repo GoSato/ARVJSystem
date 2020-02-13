@@ -15,7 +15,7 @@ public class EffectController : MonoBehaviour
     [SerializeField]
     private Toggle _toggle;
 
-    private int _index = 3;
+    private int _index = 0;
 
     [SerializeField]
     private bool _auto = false;
@@ -51,8 +51,7 @@ public class EffectController : MonoBehaviour
     {
         _toggle.onValueChanged.AddListener(OnToggleValueChanged);
         _mat.EnableKeyword("PEOPPLE");
-        _mat.DisableKeyword("MONOCHROME");
-        _mat.EnableKeyword("PASTEL");
+        _mat.EnableKeyword("NONE");
 
         _autoToggle.onValueChanged.AddListener(ChangeAuto);
         _arToggle.onValueChanged.AddListener(ChangeAR);
@@ -98,6 +97,8 @@ public class EffectController : MonoBehaviour
 
     public void ChangeEffect(int index)
     {
+        if (index == _index) return;
+
         var type = Enum.GetName(typeof(EffectType), _index);
         Debug.Log("Disable " + type);
         _mat.DisableKeyword(type);

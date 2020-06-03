@@ -65,7 +65,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/LightEstimation/LightEstimation.unity
     guid: 2f0cbc82480584c258f99f0d9e4ba302
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Meshing/ClassificationMeshes.unity
     guid: edd18841a7a8f4a68a80239a5e7f14f9
   - enabled: 0
@@ -101,6 +101,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/UX/SampleUXScene.unity
     guid: 3b42d67a72bbc4004bf713db0e312326
+  - enabled: 0
+    path: Assets/Reflection/SimpleAR_Reflection.unity
+    guid: 4b189e316d0dd4f909b1e17c47a11eb1
   m_configObjects:
     com.unity.xr.arkit.PlayerSettings: {fileID: 11400000, guid: 2d5fb8e61571b4e3897f221189089fd6,
       type: 2}

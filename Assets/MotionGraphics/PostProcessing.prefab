@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1403260982442219979}
   - component: {fileID: 1403260982442219976}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PostProcessing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sharedProfile: {fileID: 11400000, guid: 8527a5dd37ab03a45ad431be7ea3038d, type: 2}
+  sharedProfile: {fileID: 11400000, guid: 97a43c55eafe744e09e66d9e4a734c72, type: 2}
   isGlobal: 1
   blendDistance: 0
   weight: 1

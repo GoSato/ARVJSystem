@@ -10,25 +10,22 @@ public enum ARDisplayMode
     Content,
 }
 
-public class SettingUI : MonoBehaviour
+public class DisplayManager : MonoBehaviour
 {
     [SerializeField]
-    private List<GameObject> _debugObjects;
-
-    private bool _isSettingMode = true;
-
-    private List<GameObject> _debugObjectsInstances = new List<GameObject>();
+    private List<GameObject> _hideObjects;
     [SerializeField]
     private Canvas _settingCanvas;
-
     [SerializeField]
     private ARPlaneManager _arPlaneManager;
+
+    private bool _isSettingMode = true;
 
     public ARDisplayMode ARDisplayMode
     {
         get
         {
-            if(_isSettingMode)
+            if (_isSettingMode)
             {
                 return ARDisplayMode.Setting;
             }
@@ -45,48 +42,29 @@ public class SettingUI : MonoBehaviour
         switch (ARDisplayMode)
         {
             case ARDisplayMode.Content:
-                HideDebugObects();
+                HideObjects();
                 break;
             case ARDisplayMode.Setting:
-                ShowDebugObjects();
+                ShowObjects();
                 break;
         }
     }
 
-    private void ShowDebugObjects()
+    private void ShowObjects()
     {
-        _debugObjectsInstances.ForEach(obj => obj.SetActive(true));
+        _hideObjects.ForEach(obj => obj.SetActive(true));
         _arPlaneManager.enabled = true;
         foreach (var plane in _arPlaneManager.trackables)
             plane.gameObject.SetActive(true);
         _settingCanvas.enabled = true;
     }
 
-    private void HideDebugObects()
+    private void HideObjects()
     {
-        if (_debugObjectsInstances.Count == 0)
-        {
-            GetDebugObjects();
-        }
-
-        _debugObjectsInstances.ForEach(obj => obj.SetActive(false));
+        _hideObjects.ForEach(obj => obj.SetActive(false));
         _arPlaneManager.enabled = false;
         foreach (var plane in _arPlaneManager.trackables)
             plane.gameObject.SetActive(false);
         _settingCanvas.enabled = false;
-    }
-
-    private void GetDebugObjects()
-    {
-        foreach (var s in _debugObjects)
-        {
-            var name = s.name;
-            name += "(Clone)";
-            var obj = GameObject.Find(name);
-            if (obj != null)
-            {
-                _debugObjectsInstances.Add(obj);
-            }
-        }
     }
 }

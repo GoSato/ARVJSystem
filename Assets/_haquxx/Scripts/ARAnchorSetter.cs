@@ -11,15 +11,14 @@ using UnityEngine.UI;
 public class ARAnchorSetter : MonoBehaviour
 {
     [SerializeField]
-    private GameObject _anchor;
-    [SerializeField]
     private Slider _slider;
     [SerializeField]
     private Text _statusText;
 
     private ARSessionOrigin _arSessionOrigin;
     private ARRaycastManager _arRaycastManger;
-    private Transform _anchorInstance;
+    [SerializeField]
+    private Transform _arAnchor;
     private bool _isLocked = false;
     private List<ARRaycastHit> hits = new List<ARRaycastHit>();
 
@@ -27,7 +26,6 @@ public class ARAnchorSetter : MonoBehaviour
     {
         _arSessionOrigin = GetComponent<ARSessionOrigin>();
         _arRaycastManger = GetComponent<ARRaycastManager>();
-        _anchorInstance = Instantiate(_anchor).transform;
     }
 
     private void Update()
@@ -39,11 +37,11 @@ public class ARAnchorSetter : MonoBehaviour
             if (!_isLocked)
             {
                 // Move ARSessionOrigin, not content
-                _arSessionOrigin.MakeContentAppearAt(_anchorInstance, pose.position, _rot);
+                _arSessionOrigin.MakeContentAppearAt(_arAnchor, pose.position, _rot);
             }
             else
             {
-                _arSessionOrigin.MakeContentAppearAt(_anchorInstance, _rot);
+                _arSessionOrigin.MakeContentAppearAt(_arAnchor, _rot);
             }
         }
     }
@@ -65,7 +63,7 @@ public class ARAnchorSetter : MonoBehaviour
     public void UpdateRotation(Quaternion rot)
     {
         _rot = rot;
-        _arSessionOrigin.MakeContentAppearAt(_anchorInstance, _anchorInstance.transform.position, _rot);
+        _arSessionOrigin.MakeContentAppearAt(_arAnchor, _arAnchor.transform.position, _rot);
     }
 
     public void OnSliderValueChanged()

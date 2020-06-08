@@ -4,6 +4,7 @@ Shader "haquxx/ReflectionAR"
 {
     Properties
     {
+        _MainTex ("BackgroundImage Texture", 2D) = "white" {}
         _RefTex ("Reflection Texture", 2D) = "white" {}
         _BumpMap("Bump Map", 2D) = "bump" {}
         _BumpAmt("BumpAmt", Range(0,10)) = 0
@@ -13,10 +14,10 @@ Shader "haquxx/ReflectionAR"
         Tags { "RenderType"="Transparent" "Queue"="Transparent" "IgnoreProjector" = "True" }
         Blend SrcAlpha OneMinusSrcAlpha
 
-        GrabPass
-        {
-            "_BGTex"
-        }
+        //GrabPass
+        //{
+        //    "_BGTex"
+        //}
 
         Pass
         {
@@ -37,10 +38,10 @@ Shader "haquxx/ReflectionAR"
                 float2 uv : TEXCOORD0;
                 float4 vertex : SV_POSITION;
                 float4 ref : TEXCOORD1;
-                float4 grabPos : TEXCOORD2;
             };
 
-            sampler2D _BGTex;
+            sampler2D _MainTex;
+            //sampler2D _BGTex;
             sampler2D _RefTex;
             float4 _RefTex_ST;
             float4 _RefTex_TexelSize;
@@ -51,13 +52,19 @@ Shader "haquxx/ReflectionAR"
             float4x4 _RefP;
             float4x4 _RefVP;
 
+            float _ScaleFacXa;
+            float _ScaleFacYa;
+            float _ScaleFacXb;
+            float _ScaleFacYb;
+
             v2f vert (appdata v)
             {
                 v2f o;
                 o.vertex = UnityObjectToClipPos(v.vertex);
-                o.grabPos = ComputeGrabScreenPos(o.vertex);
+                float2 screenPos = o.vertex.xy / o.vertex.w;
                 o.ref = mul(_RefVP, mul(_RefM, v.vertex));
-                o.uv = TRANSFORM_TEX(v.uv, _RefTex);
+                o.uv.x = (_ScaleFacXa * screenPos.x) + _ScaleFacXb; // clipした左端~右端(0~1に収まる)
+                o.uv.y = -(_ScaleFacYa * screenPos.y) + _ScaleFacYb; // clipした下端~上端(0~1に収まる)
                 return o;
             }
 
@@ -68,11 +75,18 @@ Shader "haquxx/ReflectionAR"
                 float2 offset = bump * _BumpAmt;
 
                 // Real Camera
-                half2 uv = i.grabPos.xy / i.grabPos.w;
-                uv += offset;
-                //fixed4 col = tex2Dproj(_BGTex, i.grabPos);
-                fixed4 col = tex2D(_BGTex, uv);
+                // for AR(ARKit,ARCore)
+                i.uv.y = 1 - i.uv.y;
 
+                // for ARFoundation
+                i.uv.x = 1 - i.uv.x;
+                i.uv += offset;
+                //fixed4 col = tex2Dproj(_BGTex, i.grabPos);
+
+                // for Legacy
+                //fixed4 col = tex2D(_BGTex, uv);
+                // for URP
+                fixed4 col = tex2D(_MainTex, i.uv);
                 
                 // Reflection
                 i.ref.xy = offset + i.ref.xy;

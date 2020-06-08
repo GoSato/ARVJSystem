@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 [ExecuteInEditMode]
 public class Reflection : MonoBehaviour
@@ -17,11 +18,18 @@ public class Reflection : MonoBehaviour
         _renderer = GetComponent<Renderer>();
         _mat = _renderer.sharedMaterial;
         _mat.SetTexture("_RefTex", _reflectionCamera.targetTexture);
+
+        RenderPipelineManager.beginCameraRendering += OnBeginCameraRendering;
     }
 
-    private void OnWillRenderObject()
+    private void OnDestroy()
     {
-        var cam = Camera.current;
+        RenderPipelineManager.beginCameraRendering -= OnBeginCameraRendering;
+    }
+
+    private void OnBeginCameraRendering(ScriptableRenderContext context, Camera cam)
+    {
+        //var cam = Camera.current;
         if(cam == _reflectionCamera)
         {
             var viewMat = cam.worldToCameraMatrix;

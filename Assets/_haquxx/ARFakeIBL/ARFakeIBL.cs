@@ -36,6 +36,8 @@ public class ARFakeIBL : MonoBehaviour
     [Tooltip("The ARCameraManager which will produce frame events.")]
     ARCameraManager m_CameraManager;
 
+    public Action<Texture2D> OnCameraUpdate;
+
     /// <summary>
     /// Get or set the <c>ARCameraManager</c>.
     /// </summary>
@@ -117,7 +119,14 @@ public class ARFakeIBL : MonoBehaviour
         _skyboxMat.SetTexture("_MainTex", m_Texture);
         // Update Environment Lighting
         DynamicGI.UpdateEnvironment();
+        OnCameraUpdate?.Invoke(m_Texture);
     }
 
     Texture2D m_Texture;
+
+    public Texture2D Texture
+    {
+        private set { m_Texture = value; }
+        get { return m_Texture; }
+    }
 }

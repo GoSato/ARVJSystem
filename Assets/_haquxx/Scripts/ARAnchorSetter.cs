@@ -50,12 +50,14 @@ public class ARAnchorSetter : MonoBehaviour
     {
         _isLocked = true;
         _statusText.text = "Locked";
+        _statusText.color = Color.red;
     }
 
     public void UnLockAnchor()
     {
         _isLocked = false;
         _statusText.text = "UnLocked";
+        _statusText.color = Color.green;
     }
 
     private Quaternion _rot;

@@ -122,7 +122,8 @@ public class LightController : MonoBehaviour
         if (args.lightEstimation.averageBrightness.HasValue)
         {
             brightness = args.lightEstimation.averageBrightness.Value;
-            m_Light.intensity = brightness.Value * _intensityScale;
+            m_Light.intensity = brightness.Value;
+            RenderSettings.ambientIntensity = brightness.Value;
         }
 
         if (args.lightEstimation.averageColorTemperature.HasValue)
@@ -162,6 +163,7 @@ public class LightController : MonoBehaviour
         {
             mainLightIntensityLumens = args.lightEstimation.mainLightIntensityLumens;
             m_Light.intensity = args.lightEstimation.averageMainLightBrightness.Value;
+            RenderSettings.ambientIntensity = args.lightEstimation.averageMainLightBrightness.Value;
         }
 
         if (args.lightEstimation.ambientSphericalHarmonics.HasValue)
@@ -173,22 +175,4 @@ public class LightController : MonoBehaviour
     }
 
     Light m_Light;
-
-    [SerializeField]
-    private Slider _slider;
-
-    private float _intensityScale = 1.0f;
-
-    [SerializeField]
-    private Light _light;
-
-    void Start()
-    {
-        _slider.onValueChanged.AddListener(UpdateValue);
-    }
-
-    public void UpdateValue(float val)
-    {
-        _intensityScale = val;
-    }
 }

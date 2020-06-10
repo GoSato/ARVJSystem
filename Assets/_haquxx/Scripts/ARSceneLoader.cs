@@ -2,17 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ARSceneLoader : MonoBehaviour
 {
     [SerializeField]
-    private List<string> _sceneList;
+    private string _scene;
+
+    [SerializeField]
+    private Toggle _toggle;
 
     private void Start()
     {
-        for (int i = 0; i < _sceneList.Count; i++)
+        _toggle.onValueChanged.AddListener(SceneLoad);
+    }
+
+    public void SceneLoad(bool isOn)
+    {
+        if (isOn)
         {
-            SceneManager.LoadScene(_sceneList[i], LoadSceneMode.Additive);
+            SceneManager.LoadScene(_scene, LoadSceneMode.Additive);
+        }
+        else
+        {
+            SceneManager.UnloadSceneAsync(_scene);
         }
     }
 }

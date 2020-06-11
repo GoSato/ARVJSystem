@@ -25,7 +25,12 @@ public class FPSCounter : MonoBehaviour
             timeleft = _updateInterval;
 
             if (_text != null)
-                _text.text = (accum / frames).ToString("f2");
+            {
+                var fps = accum / frames;
+                _text.text = fps.ToString("f2");
+                var col = fps >= 60.0f ? Color.green : Color.red;
+                _text.color = col;
+            }
 
             accum = 0.0f;
             frames = 0;

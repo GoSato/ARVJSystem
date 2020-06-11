@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class ARSceneLoader : MonoBehaviour
+public class SceneLoader : MonoBehaviour
 {
     [SerializeField]
     private string _scene;

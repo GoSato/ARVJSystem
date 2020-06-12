@@ -21,6 +21,11 @@ namespace Klak.Ndi
     {
         #region Source texture
 
+        [SerializeField]
+        private int _customWidth = 1920;
+        [SerializeField]
+        private int _customHeight = 1080;
+
         [SerializeField] RenderTexture _sourceTexture;
 
         public RenderTexture sourceTexture {
@@ -81,7 +86,7 @@ namespace Klak.Ndi
 
             // Allocate a new render texture.
             _converted = RenderTexture.GetTemporary(
-                source.width / 2, (_alphaSupport ? 3 : 2) * source.height / 2, 0,
+                _customWidth / 2, (_alphaSupport ? 3 : 2) * _customHeight / 2, 0,
                 RenderTextureFormat.ARGB32, RenderTextureReadWrite.Linear
             );
 
@@ -97,7 +102,7 @@ namespace Klak.Ndi
 
             // Request readback.
             _frameQueue.Enqueue(new Frame{
-                width = source.width, height = source.height, alpha = _alphaSupport,
+                width = _customWidth, height = _customHeight, alpha = _alphaSupport,
                 readback = AsyncGPUReadback.Request(_converted)
             });
         }

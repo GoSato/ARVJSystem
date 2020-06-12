@@ -13,10 +13,16 @@ namespace Klak.Ndi
         SerializedProperty _sourceTexture;
         SerializedProperty _alphaSupport;
 
+        SerializedProperty _customWidth;
+        SerializedProperty _customHeight;
+
         void OnEnable()
         {
             _sourceTexture = serializedObject.FindProperty("_sourceTexture");
             _alphaSupport = serializedObject.FindProperty("_alphaSupport");
+
+            _customWidth = serializedObject.FindProperty("_customWidth");
+            _customHeight = serializedObject.FindProperty("_customHeight");
         }
 
         public override void OnInspectorGUI()
@@ -51,6 +57,9 @@ namespace Klak.Ndi
                 EditorGUILayout.PropertyField(_sourceTexture);
 
             EditorGUILayout.PropertyField(_alphaSupport);
+
+            EditorGUILayout.PropertyField(_customWidth);
+            EditorGUILayout.PropertyField(_customHeight);
 
             serializedObject.ApplyModifiedProperties();
         }

@@ -82,9 +82,6 @@ MonoBehaviour:
   Height:
     m_OverrideState: 0
     m_Value: 1080
-  RenderTexture:
-    m_OverrideState: 0
-    m_Value: {fileID: 0}
 --- !u!114 &-550595268986170331
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -105,9 +102,6 @@ MonoBehaviour:
   Height:
     m_OverrideState: 1
     m_Value: 1080
-  RenderTexture:
-    m_OverrideState: 1
-    m_Value: {fileID: 0}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0

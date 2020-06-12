@@ -8,7 +8,6 @@ public class Clipping : VolumeComponent, IPostProcessComponent
 {
     public IntParameter Width = new IntParameter(1920);
     public IntParameter Height = new IntParameter(1080);
-    public TextureParameter RenderTexture = new TextureParameter(null);
 
     public bool IsActive()
     {

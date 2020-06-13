@@ -2,6 +2,7 @@
 {
     Properties
     {
+        _Mask ("Mask", int) = 1
         _MainTex ("Texture", 2D) = "white" {}
     }
     SubShader
@@ -12,7 +13,7 @@
         {
             Stencil
             {
-                Ref 1
+                Ref [_Mask]
                 Comp Equal
             }
 

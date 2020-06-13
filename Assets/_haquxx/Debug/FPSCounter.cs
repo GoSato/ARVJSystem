@@ -28,7 +28,7 @@ public class FPSCounter : MonoBehaviour
             {
                 var fps = accum / frames;
                 _text.text = fps.ToString("f2");
-                var col = fps >= 60.0f ? Color.green : Color.red;
+                var col = fps >= 25.0f ? Color.green : Color.red;
                 _text.color = col;
             }
 

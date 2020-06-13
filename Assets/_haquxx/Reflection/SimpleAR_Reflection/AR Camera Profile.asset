@@ -76,6 +76,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 1
   m_AdvancedMode: 0
+  Enable:
+    m_OverrideState: 0
+    m_Value: 0
   Width:
     m_OverrideState: 0
     m_Value: 1920
@@ -96,6 +99,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 1
   m_AdvancedMode: 0
+  Enable:
+    m_OverrideState: 1
+    m_Value: 1
   Width:
     m_OverrideState: 1
     m_Value: 1920

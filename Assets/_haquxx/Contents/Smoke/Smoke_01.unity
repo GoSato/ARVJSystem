@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -304,6 +304,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: xbot@Idle
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 9f1eb179d86014b958804ec6e32ab8fc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1127413562660826936, guid: 9f1eb179d86014b958804ec6e32ab8fc,
         type: 3}

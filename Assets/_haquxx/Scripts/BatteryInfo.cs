@@ -10,19 +10,27 @@ public class BatteryInfo : MonoBehaviour
     [SerializeField]
     private Text _batteryStatusText;
 
+    private int _frameCount;
+
     private void Update()
     {
-        var level = SystemInfo.batteryLevel;
-        var status = SystemInfo.batteryStatus;
-
-        if(_batteryLevelText != null)
+        if (_frameCount > 60)
         {
-            _batteryLevelText.text = (level * 100f).ToString() + "%";
-        }
+            _frameCount = 0;
 
-        if(_batteryStatusText != null)
-        {
-            _batteryStatusText.text = status.ToString();
+            var level = SystemInfo.batteryLevel;
+            var status = SystemInfo.batteryStatus;
+
+            if (_batteryLevelText != null)
+            {
+                _batteryLevelText.text = (level * 100f).ToString() + "%";
+            }
+
+            if (_batteryStatusText != null)
+            {
+                _batteryStatusText.text = status.ToString();
+            }
         }
+        _frameCount++;
     }
 }

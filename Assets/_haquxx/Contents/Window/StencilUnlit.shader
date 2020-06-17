@@ -4,10 +4,12 @@
     {
         _Mask ("Mask", int) = 1
         _MainTex ("Texture", 2D) = "white" {}
+        _Alpha ("Alpha", Range(0.0,1.0)) = 1.0
     }
     SubShader
     {
-        Tags { "RenderType"="Opaque" }
+        Tags { "RenderType"="Transparent" "Queue"="Transparent" }
+        Blend SrcAlpha OneMinusSrcAlpha
 
         Pass
         {
@@ -40,6 +42,7 @@
 
             sampler2D _MainTex;
             float4 _MainTex_ST;
+            float _Alpha;
 
             v2f vert (appdata v)
             {
@@ -54,6 +57,7 @@
             {
                 // sample the texture
                 fixed4 col = tex2D(_MainTex, i.uv);
+                col.a = _Alpha;
                 // apply fog
                 UNITY_APPLY_FOG(i.fogCoord, col);
                 return col;

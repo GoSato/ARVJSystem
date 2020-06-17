@@ -6,20 +6,49 @@ using UnityEngine.XR.ARSubsystems;
 using UnityEngine.UI;
 
 namespace ARVJ
-{
+{   
     [RequireComponent(typeof(ARSessionOrigin))]
     [RequireComponent(typeof(ARRaycastManager))]
     public class ARWorldAnchor : MonoBehaviour
     {
+        public enum AnchorPositionType
+        {
+            Left,
+            Center,
+            Right
+        }
+
+        public static readonly float LEFT_POSITION = -3.0f;
+        public static readonly float CENTER_POSITION = 0.0f;
+        public static readonly float RIGHT_POSITION = 3.0f;
+
         [SerializeField]
         private Transform _arAnchor;
         [SerializeField]
         private Text _statusText;
+        [SerializeField]
+        private AnchorPositionType _anchorPositionType = AnchorPositionType.Center;
 
         private ARSessionOrigin _arSessionOrigin;
         private ARRaycastManager _arRaycastManger;
         private bool _isLocked = false;
         private List<ARRaycastHit> hits = new List<ARRaycastHit>();
+
+        private Vector3 _position;
+        public Vector3 Position
+        {
+            get { return _position; }
+            set
+            {
+                _position = value;
+                if (_arSessionOrigin != null)
+                {
+                    _arAnchor.transform.position = _position;
+                    _arSessionOrigin.MakeContentAppearAt(_arAnchor, _arAnchor.transform.position, _arAnchor.transform.rotation);
+                    Debug.Log(_position);
+                }
+            }
+        }
 
         private Quaternion _rotation;
         public Quaternion Rotation

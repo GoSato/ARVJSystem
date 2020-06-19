@@ -5,105 +5,90 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/ARCollaborationData/ARCollaborationDataExample.unity
-    guid: 900e7bfe6122645fba71b90941afb9c5
-  - enabled: 0
-    path: Assets/Scenes/ARKitCoachingOverlay/ARKitCoachingOverlay.unity
-    guid: 98afc3855ff0b426f81ac1d7c646b6c1
-  - enabled: 0
-    path: Assets/Scenes/ARWorldMap.unity
-    guid: 8d8902fd0b55449dcbf3572b49d6b1b1
-  - enabled: 0
-    path: Assets/Scenes/Anchors.unity
-    guid: 5cba9114a192a46a7aef31da62316e39
-  - enabled: 0
-    path: Assets/Scenes/CameraImage.unity
-    guid: e769916924fd3814ab1d9474de816b22
-  - enabled: 0
-    path: Assets/Scenes/Check Support.unity
-    guid: cf67ab53e5ff241dfa61608222d82109
-  - enabled: 0
-    path: Assets/Scenes/EnvironmentProbes.unity
-    guid: d568d188cadf141e38769dbabd3fe385
-  - enabled: 0
-    path: Assets/Scenes/FaceTracking/ARCoreFaceRegions.unity
-    guid: d1739ac106ca65e4b83528a440314bd9
-  - enabled: 0
-    path: Assets/Scenes/FaceTracking/ARKitFaceBlendShapes.unity
-    guid: e9280441e79e84bdbbf6b724880ae2d9
-  - enabled: 0
-    path: Assets/Scenes/FaceTracking/EyeLasers.unity
-    guid: c8ca2b95503fe4a7194f37bfbe5e4688
-  - enabled: 0
-    path: Assets/Scenes/FaceTracking/EyePoses.unity
-    guid: 19344822e252a420e94db72338383cbc
-  - enabled: 0
-    path: Assets/Scenes/FaceTracking/FaceMesh.unity
-    guid: 047514b96a5d44d6bb0acbfa06ace943
-  - enabled: 0
-    path: Assets/Scenes/FaceTracking/FacePose.unity
-    guid: d8b65509a10894e1dbb93c799ececfd9
-  - enabled: 0
-    path: Assets/Scenes/FaceTracking/FixationPoint.unity
-    guid: b0bf27dc892684a049959459ba5e6f8f
-  - enabled: 0
-    path: Assets/Scenes/FaceTracking/WorldCameraWithUserFacingFaceTracking.unity
-    guid: ecea31d2ea5464e52bedb91fa1fcb6bb
-  - enabled: 0
-    path: Assets/Scenes/HumanSegmentation/HumanBodyTracking2D.unity
-    guid: b2551dd1f69e7446e9093f0f38e03160
-  - enabled: 0
-    path: Assets/Scenes/HumanSegmentation/HumanBodyTracking3D.unity
-    guid: 9fc1f5ed98d414310a8b9e659c295d7c
-  - enabled: 0
-    path: Assets/Scenes/HumanSegmentation/HumanSegmentationImages.unity
-    guid: ed5207d50697d40d688249cd6c59608b
-  - enabled: 0
-    path: Assets/Scenes/ImageTracking/ImageTracking.unity
-    guid: e0b018a3c3b5cfd4c8e316706ec0a18c
-  - enabled: 0
-    path: Assets/Scenes/LightEstimation/LightEstimation.unity
-    guid: 2f0cbc82480584c258f99f0d9e4ba302
   - enabled: 1
-    path: Assets/Scenes/Meshing/ClassificationMeshes.unity
-    guid: edd18841a7a8f4a68a80239a5e7f14f9
-  - enabled: 0
-    path: Assets/Scenes/Meshing/NormalMeshes.unity
-    guid: b8abb254c2f424d54921b442ad2f9f2e
-  - enabled: 0
-    path: Assets/Scenes/Meshing/OcclusionMeshes.unity
-    guid: adcdbf89e115e4a489bd500be88c1459
-  - enabled: 0
-    path: Assets/Scenes/Object Tracking/ObjectTracking.unity
-    guid: 8f797cefb98fe43109524cbbcc8faafc
-  - enabled: 0
-    path: Assets/Scenes/Plane Detection/FeatheredPlanes.unity
-    guid: 8252358a1e2ba7549a94df43aacec984
-  - enabled: 0
-    path: Assets/Scenes/Plane Detection/PlaneClassification.unity
-    guid: ea35aff45ed534fb9b030b82a5d980f4
-  - enabled: 0
-    path: Assets/Scenes/Plane Detection/TogglePlaneDetection.unity
-    guid: eb4bbb3a5e81acc41a903b1c5f1c827b
-  - enabled: 0
-    path: Assets/Scenes/PlaneOcclusion/PlaneOcclusion.unity
-    guid: 82d84156010e4481498cad3bf12744bd
-  - enabled: 0
-    path: Assets/Scenes/PointCloud/AllPointCloudPoints.unity
-    guid: a84b70115cd154cf59b84651a828ac60
-  - enabled: 0
-    path: Assets/Scenes/Scale.unity
-    guid: 13ac91f677dc22f4ca320ef8ae727b68
-  - enabled: 0
-    path: Assets/Scenes/SimpleAR/SimpleAR.unity
-    guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 0
-    path: Assets/Scenes/UX/SampleUXScene.unity
-    guid: 3b42d67a72bbc4004bf713db0e312326
-  - enabled: 0
-    path: Assets/Reflection/SimpleAR_Reflection.unity
+    path: Assets/_haquxx/ARVJSystem.unity
     guid: 4b189e316d0dd4f909b1e17c47a11eb1
+  - enabled: 1
+    path: Assets/_haquxx/Contents/2DEffect/2DEffect_01.unity
+    guid: 566473e9c79b940d2ac072aa4e9be2dd
+  - enabled: 1
+    path: Assets/_haquxx/Contents/2DEffect/2DEffect_02.unity
+    guid: f380008ac078b4fe9801314150403cd0
+  - enabled: 1
+    path: Assets/_haquxx/Contents/2DEffect/2DEffect_03.unity
+    guid: a2b100a89e8b840b38b10f50955b2f8c
+  - enabled: 1
+    path: Assets/_haquxx/Contents/Triangle/Triangle_01.unity
+    guid: 262210e73a43b4e61b6ca866fac07d79
+  - enabled: 1
+    path: Assets/_haquxx/Contents/Scenes/TriangleRing_01.unity
+    guid: 07c5ce4717f434ce0907bb36603d6f00
+  - enabled: 1
+    path: Assets/_haquxx/Contents/TriangleTunnel/TriangleTunnel_01.unity
+    guid: ebc9c1d307a204872b28598815d7a2e9
+  - enabled: 1
+    path: Assets/_haquxx/Contents/Logo/Logo_01.unity
+    guid: d4bcbe0e01ebd44eba705a45403a9514
+  - enabled: 1
+    path: Assets/_haquxx/Contents/Scenes/Circle_01.unity
+    guid: f38a2165bf8044df7823b4a57b02a72d
+  - enabled: 1
+    path: Assets/_haquxx/Contents/Window/Window_01.unity
+    guid: 116827b44c88e463795d8edcbc870de9
+  - enabled: 1
+    path: Assets/_haquxx/Contents/Smoke/Smoke_01.unity
+    guid: 2e8ae63b768454795bf313f2b7a0b7e5
+  - enabled: 1
+    path: Assets/_haquxx/Contents/Bubble/Bubble_01.unity
+    guid: b7274433531f140b38ddfdceae37eebb
+  - enabled: 1
+    path: Assets/_haquxx/Contents/Cube/Cube_01.unity
+    guid: b425dee7dac56442aab6f9716e341569
+  - enabled: 1
+    path: Assets/_haquxx/Contents/Jellyfish/Jellyfish_01.unity
+    guid: 4dcbae82758fe49939bd0b3fc45697a1
+  - enabled: 1
+    path: Assets/_haquxx/Contents/MotionGraphics/MotionGraphics_01.unity
+    guid: 7c4fae49772bc4f8c992559a1e87110c
+  - enabled: 1
+    path: Assets/_haquxx/Contents/MotionGraphics/MotionGraphics_02_01.unity
+    guid: 584ec76aec59541868d4aa7ae6a2eec6
+  - enabled: 1
+    path: Assets/_haquxx/Contents/MotionGraphics/MotionGraphics_03.unity
+    guid: f6568c0a863004bec9fe8e79e1c78d95
+  - enabled: 1
+    path: Assets/_haquxx/Contents/AnimationTile/AnimationTile_01.unity
+    guid: ffae1de0302fd4e4f80562fc4a6e68cb
+  - enabled: 1
+    path: Assets/_haquxx/Contents/Whale/Whale_01.unity
+    guid: f8231fb17ed1644119053374c264c2ed
+  - enabled: 1
+    path: Assets/_haquxx/Contents/Scenes/Reflection_01.unity
+    guid: efd5cd1bee7ff4d419a140d76e56d1df
+  - enabled: 1
+    path: Assets/_haquxx/Debug/ColorChart.unity
+    guid: 273a2dbfd468b4508a72700605893aa4
+  - enabled: 1
+    path: Assets/_haquxx/Contents/MotionGraphics/MotionGraphics_02_02.unity
+    guid: 9aded949302354660a4bcdfd1fbaafb1
+  - enabled: 1
+    path: Assets/_haquxx/Contents/Bubble/Bubble_01_02.unity
+    guid: ad0924861278442b19ab00cfa2ef5b3d
+  - enabled: 1
+    path: Assets/_haquxx/Contents/Cube/Cube_02.unity
+    guid: 12817d81e73a34ff3bf6b89f9aa98464
+  - enabled: 1
+    path: Assets/_haquxx/Contents/Cube/Cube_03.unity
+    guid: 4d33fed7ac3614fb297d03032ad0d490
+  - enabled: 1
+    path: Assets/_haquxx/Contents/Triangle/Triangle_02.unity
+    guid: f686bbb767e2747a09e025579c45d850
+  - enabled: 1
+    path: Assets/_haquxx/Contents/Cube/Cube_03_02.unity
+    guid: c2cfd527239454045ac22fea4ff0ad6b
+  - enabled: 1
+    path: Assets/_haquxx/Contents/Pyramid/Pyramid_01.unity
+    guid: 8198d8b408d644677a1bae1292f05db2
   m_configObjects:
     com.unity.xr.arkit.PlayerSettings: {fileID: 11400000, guid: 2d5fb8e61571b4e3897f221189089fd6,
       type: 2}

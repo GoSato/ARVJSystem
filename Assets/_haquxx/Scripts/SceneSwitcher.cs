@@ -41,6 +41,21 @@ public class SceneSwitcher : MonoBehaviour
 
         var tempList = new int[3] { indexList.x, indexList.y, indexList.z };
 
+        // リストに-1が含まれる時、シーンを全てアンロードする
+        if(Array.IndexOf(tempList, -1) != -1)
+        {
+            for(int i=0; i<_activeSceneList.Length; i++)
+            {
+                if(_activeSceneList[i] != 0)
+                {
+                    SceneManager.UnloadSceneAsync(_activeSceneList[i]);
+                }
+                _activeSceneList[i] = 0;
+            }
+            return;
+        }
+
+        // 0は何もしない
         for (int i = 0; i < _activeSceneList.Length; i++)
         {
             if (Array.IndexOf(tempList, _activeSceneList[i]) == -1 && _activeSceneList[i] != 0)

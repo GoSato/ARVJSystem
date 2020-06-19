@@ -61,7 +61,7 @@ float noise (float2 st) {
 }
 
 float fbm (float2 st) {
-    int OCTAVES = 6;
+    int OCTAVES = 3;
     // Initial values
     float value = 0.0;
     float amplitude = .5;

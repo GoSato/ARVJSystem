@@ -1,5 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7213577166332469901
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
 --- !u!21 &2100000
 Material:
   serializedVersion: 6
@@ -7,8 +20,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Pyramid
-  m_Shader: {fileID: -6465566751694194690, guid: f859bd117470347c88af76b55991cda9,
+  m_Name: Triagnle_Tile_Mosaic_02
+  m_Shader: {fileID: -6465566751694194690, guid: 5984cb4f563ee412c938e74e18382fa8,
     type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -20,10 +33,6 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - Texture2D_7D742DCF:
-        m_Texture: {fileID: 2800000, guid: 0f186aac55a5c49a7ad63f192a89c112, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _BaseMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -53,21 +62,8 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Boolean_C577D1F3: 0
-    - Vector1_155F0743: 1.75
-    - Vector1_2E64A2C2: 0.1
-    - Vector1_3D2DA75D: 0.05
-    - Vector1_52F1B902: 0
-    - Vector1_622A47A0: 6
-    - Vector1_78D414BD: 1
-    - Vector1_7C632D0B: 0.75
-    - Vector1_9D0BAAB8: 0.2
-    - Vector1_9E5C590D: 0.5
-    - Vector1_CA749EDD: 0.5
-    - Vector1_DDB19D48: 1
-    - Vector1_E5BD72D8: 0.1
-    - Vector1_E750199E: 0.5
-    - Vector1_FF24B3E1: 0.5
+    - Vector1_622A47A0: 8
+    - Vector1_9E5C590D: 0.2
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -90,25 +86,12 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_41A65700: {r: 0, g: 0.42352942, b: 4, a: 0}
-    - Color_92C1E1B9: {r: 1.027451, g: 1.9686275, b: 2, a: 0}
-    - Vector2_3062C954: {r: 1, g: 1, b: 0, a: 0}
-    - Vector2_44F87174: {r: 0.1, g: 0, b: 0, a: 0}
-    - Vector2_9E6E1227: {r: 1, g: 1, b: 0, a: 0}
+    - Color_41A65700: {r: 2.735849, g: 4, b: 3.453417, a: 0}
+    - Color_82197183: {r: 0, g: 1039.435, b: 1367.1202, a: 1}
+    - Color_92C1E1B9: {r: 0, g: 2.4815447, b: 2.4667037, a: 0}
+    - Vector2_44F87174: {r: 0.1, g: 0.07, b: 0, a: 0}
+    - Vector2_9E6E1227: {r: 0.4, g: 1, b: 0, a: 0}
     - _BaseColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
---- !u!114 &3629497362856091521
-MonoBehaviour:
-  m_ObjectHideFlags: 11
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 1

@@ -8,19 +8,23 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: mt_2
-  m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: f859bd117470347c88af76b55991cda9,
+    type: 3}
   m_ShaderKeywords: _EMISSION _ENVIRONMENTREFLECTIONS_OFF _OCCLUSIONMAP _SPECULARHIGHLIGHTS_OFF
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3050
-  stringTagMap:
-    RenderType: Transparent
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
   disabledShaderPasses:
   - SHADOWCASTER
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - Texture2D_7D742DCF:
+        m_Texture: {fileID: 2800000, guid: 0f186aac55a5c49a7ad63f192a89c112, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BaseMap:
         m_Texture: {fileID: 2800000, guid: b7e27ea8f2b90554093577b575db678d, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -66,6 +70,19 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Boolean_C577D1F3: 0
+    - Vector1_155F0743: 1.75
+    - Vector1_2E64A2C2: 0.1
+    - Vector1_3D2DA75D: 0.05
+    - Vector1_52F1B902: 0
+    - Vector1_78D414BD: 1
+    - Vector1_7C632D0B: 0.75
+    - Vector1_9D0BAAB8: 0.2
+    - Vector1_CA749EDD: 0.5
+    - Vector1_DDB19D48: 1
+    - Vector1_E5BD72D8: 0.1
+    - Vector1_E750199E: 0.5
+    - Vector1_FF24B3E1: 0.5
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -77,13 +94,13 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0.299
     - _GlossyReflections: 0
-    - _Metallic: 0
+    - _Metallic: 0.733
     - _Mode: 2
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _Smoothness: 0
+    - _Smoothness: 0.738
     - _SmoothnessTextureChannel: 1
     - _SpecularHighlights: 0
     - _SrcBlend: 5
@@ -92,9 +109,10 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 0
     m_Colors:
-    - _BaseColor: {r: 1, g: 1, b: 1, a: 0.741}
+    - Vector2_3062C954: {r: 1, g: 1, b: 0, a: 0}
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 0.11372549}
     - _Color: {r: 0.75, g: 0.75, b: 0.75, a: 0.741}
-    - _EmissionColor: {r: 0, g: 0.66551226, b: 1.0592737, a: 1}
+    - _EmissionColor: {r: 2.0812953, g: 2.0812953, b: 2.0812953, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
 --- !u!114 &8031829219855537097
 MonoBehaviour:

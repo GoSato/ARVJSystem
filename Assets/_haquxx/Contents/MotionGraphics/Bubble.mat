@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Pyramid
+  m_Name: Bubble
   m_Shader: {fileID: -6465566751694194690, guid: f859bd117470347c88af76b55991cda9,
     type: 3}
   m_ShaderKeywords: 
@@ -58,11 +58,9 @@ Material:
     - Vector1_2E64A2C2: 0.1
     - Vector1_3D2DA75D: 0.05
     - Vector1_52F1B902: 0
-    - Vector1_622A47A0: 6
     - Vector1_78D414BD: 1
     - Vector1_7C632D0B: 0.75
     - Vector1_9D0BAAB8: 0.2
-    - Vector1_9E5C590D: 0.5
     - Vector1_CA749EDD: 0.5
     - Vector1_DDB19D48: 1
     - Vector1_E5BD72D8: 0.1
@@ -90,16 +88,12 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_41A65700: {r: 0, g: 0.42352942, b: 4, a: 0}
-    - Color_92C1E1B9: {r: 1.027451, g: 1.9686275, b: 2, a: 0}
     - Vector2_3062C954: {r: 1, g: 1, b: 0, a: 0}
-    - Vector2_44F87174: {r: 0.1, g: 0, b: 0, a: 0}
-    - Vector2_9E6E1227: {r: 1, g: 1, b: 0, a: 0}
     - _BaseColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
---- !u!114 &3629497362856091521
+    - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+--- !u!114 &3424839461556477466
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}

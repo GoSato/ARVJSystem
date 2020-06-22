@@ -18,9 +18,9 @@ namespace ARVJ
             Right
         }
 
-        public static readonly float LEFT_POSITION = -3.0f;
+        public static readonly float LEFT_POSITION = -4.3f;
         public static readonly float CENTER_POSITION = 0.0f;
-        public static readonly float RIGHT_POSITION = 3.0f;
+        public static readonly float RIGHT_POSITION = 4.3f;
 
         [SerializeField]
         private Transform _arAnchor;

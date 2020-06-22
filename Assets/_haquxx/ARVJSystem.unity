@@ -1170,7 +1170,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &356677010
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1618,9 +1618,9 @@ RectTransform:
   m_Father: {fileID: 1976168603}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -1100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &450260449
@@ -1635,7 +1635,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce5519d8beee84d1ab2789b1d7a3b370, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _scene: MotionGraphics_01
+  _scene: Cube_03
   _toggle: {fileID: 450260450}
 --- !u!114 &450260450
 MonoBehaviour:
@@ -1852,9 +1852,9 @@ RectTransform:
   m_Father: {fileID: 1714616239}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -700}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &514795635
@@ -1916,7 +1916,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce5519d8beee84d1ab2789b1d7a3b370, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _scene: Triangle_01
+  _scene: TriangleTunnel_01
   _toggle: {fileID: 514795635}
 --- !u!1 &516020040
 GameObject:
@@ -2088,7 +2088,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &567214076
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2170,9 +2170,9 @@ RectTransform:
   m_Father: {fileID: 1714616239}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -900}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &584117789
@@ -2234,7 +2234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce5519d8beee84d1ab2789b1d7a3b370, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _scene: TriangleRing_01
+  _scene: Bubble_01
   _toggle: {fileID: 584117789}
 --- !u!1 &605107993
 GameObject:
@@ -2790,9 +2790,9 @@ RectTransform:
   m_Father: {fileID: 1976168603}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -1500}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &607285133
@@ -2807,7 +2807,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce5519d8beee84d1ab2789b1d7a3b370, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _scene: MotionGraphics_03
+  _scene: Cube_03_02
   _toggle: {fileID: 607285134}
 --- !u!114 &607285134
 MonoBehaviour:
@@ -3197,9 +3197,9 @@ RectTransform:
   m_Father: {fileID: 1976168603}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &680606784
@@ -3214,7 +3214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce5519d8beee84d1ab2789b1d7a3b370, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _scene: Window_01
+  _scene: MotionGraphics_03
   _toggle: {fileID: 680606785}
 --- !u!114 &680606785
 MonoBehaviour:
@@ -3800,9 +3800,9 @@ RectTransform:
   m_Father: {fileID: 1714616239}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -1100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &877091473
@@ -3864,7 +3864,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce5519d8beee84d1ab2789b1d7a3b370, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _scene: TriangleTunnel_01
+  _scene: Jellyfish_01
   _toggle: {fileID: 877091473}
 --- !u!1 &899870549
 GameObject:
@@ -3899,9 +3899,9 @@ RectTransform:
   m_Father: {fileID: 1976168603}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -300}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &899870551
@@ -3916,7 +3916,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce5519d8beee84d1ab2789b1d7a3b370, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _scene: Smoke_01
+  _scene: Whale_01
   _toggle: {fileID: 899870552}
 --- !u!114 &899870552
 MonoBehaviour:
@@ -4004,9 +4004,9 @@ RectTransform:
   m_Father: {fileID: 1976168603}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -900}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &961172038
@@ -4021,7 +4021,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce5519d8beee84d1ab2789b1d7a3b370, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _scene: Jellyfish_01
+  _scene: Cube_02
   _toggle: {fileID: 961172039}
 --- !u!114 &961172039
 MonoBehaviour:
@@ -4537,9 +4537,9 @@ RectTransform:
   m_Father: {fileID: 1714616239}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -1300}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1037320386
@@ -4554,7 +4554,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce5519d8beee84d1ab2789b1d7a3b370, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _scene: Logo_01
+  _scene: MotionGraphics_01
   _toggle: {fileID: 1037320387}
 --- !u!114 &1037320387
 MonoBehaviour:
@@ -5107,9 +5107,9 @@ RectTransform:
   m_Father: {fileID: 1976168603}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -500}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1166505188
@@ -5124,7 +5124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce5519d8beee84d1ab2789b1d7a3b370, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _scene: Bubble_01
+  _scene: MotionGraphics_02_02
   _toggle: {fileID: 1166505189}
 --- !u!114 &1166505189
 MonoBehaviour:
@@ -6392,9 +6392,9 @@ RectTransform:
   m_Father: {fileID: 1976168603}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -1300}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1330686216
@@ -6409,7 +6409,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce5519d8beee84d1ab2789b1d7a3b370, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _scene: MotionGraphics_02
+  _scene: Triangle_02
   _toggle: {fileID: 1330686217}
 --- !u!114 &1330686217
 MonoBehaviour:
@@ -7039,7 +7039,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1377870088
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7817,9 +7817,9 @@ RectTransform:
   m_Father: {fileID: 1714616239}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -500}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1543231790
@@ -7881,7 +7881,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce5519d8beee84d1ab2789b1d7a3b370, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _scene: 2DEffect_03
+  _scene: TriangleRing_01
   _toggle: {fileID: 1543231790}
 --- !u!1 &1636178483
 GameObject:
@@ -8198,7 +8198,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1714616239
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8430,9 +8430,9 @@ RectTransform:
   m_Father: {fileID: 567214076}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1730981207
@@ -8447,7 +8447,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce5519d8beee84d1ab2789b1d7a3b370, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _scene: AnimationTile_01
+  _scene: Pyramid_01
   _toggle: {fileID: 1730981208}
 --- !u!114 &1730981208
 MonoBehaviour:
@@ -8954,7 +8954,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1818969534
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9366,9 +9366,9 @@ RectTransform:
   m_Father: {fileID: 1714616239}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -1500}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1951286405
@@ -9383,7 +9383,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce5519d8beee84d1ab2789b1d7a3b370, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _scene: Circle_01
+  _scene: MotionGraphics_02_01
   _toggle: {fileID: 1951286406}
 --- !u!114 &1951286406
 MonoBehaviour:
@@ -9478,7 +9478,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1976168603
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9564,9 +9564,9 @@ RectTransform:
   m_Father: {fileID: 1976168603}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -700}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1987704875
@@ -9581,7 +9581,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce5519d8beee84d1ab2789b1d7a3b370, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _scene: Cube_01
+  _scene: Bubble_01_02
   _toggle: {fileID: 1987704876}
 --- !u!114 &1987704876
 MonoBehaviour:
@@ -9902,9 +9902,9 @@ RectTransform:
   m_Father: {fileID: 1714616239}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2042771660
@@ -9919,7 +9919,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce5519d8beee84d1ab2789b1d7a3b370, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _scene: 2DEffect_01
+  _scene: Shinjuku_Blaze
   _toggle: {fileID: 2042771661}
 --- !u!114 &2042771661
 MonoBehaviour:
@@ -10181,9 +10181,9 @@ RectTransform:
   m_Father: {fileID: 1714616239}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -300}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2143724252
@@ -10245,7 +10245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce5519d8beee84d1ab2789b1d7a3b370, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _scene: 2DEffect_02
+  _scene: Triangle_01
   _toggle: {fileID: 2143724252}
 --- !u!1001 &3811591508619061747
 PrefabInstance:

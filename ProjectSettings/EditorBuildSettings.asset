@@ -89,6 +89,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_haquxx/Contents/Pyramid/Pyramid_01.unity
     guid: 8198d8b408d644677a1bae1292f05db2
+  - enabled: 1
+    path: Assets/_haquxx/Debug/Shinjuku_Blaze.unity
+    guid: 55fc4ab7874514eda8eadb8ba9f96e30
   m_configObjects:
     com.unity.xr.arkit.PlayerSettings: {fileID: 11400000, guid: 2d5fb8e61571b4e3897f221189089fd6,
       type: 2}

@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: CameraOpaqueTexture
-  m_Shader: {fileID: -6465566751694194690, guid: 2639bb5fd98a84a7bb945d2c4f0f9810,
+  m_Name: Circle
+  m_Shader: {fileID: -6465566751694194690, guid: 113b50fddefb345579ee31228d62d84b,
     type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -21,6 +21,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs: []
     m_Floats:
-    - Vector1_4BB9B773: -0.076
-    - Vector1_745169EB: 0
-    m_Colors: []
+    - Vector1_69971B5: 0.01
+    m_Colors:
+    - Color_9901CF3: {r: 1, g: 1, b: 1, a: 0}
+    - Vector2_DAFD25DE: {r: 1, g: 1, b: 0, a: 0}

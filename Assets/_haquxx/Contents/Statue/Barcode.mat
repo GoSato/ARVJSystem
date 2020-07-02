@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: CameraOpaqueTexture
-  m_Shader: {fileID: -6465566751694194690, guid: 2639bb5fd98a84a7bb945d2c4f0f9810,
+  m_Name: Barcode
+  m_Shader: {fileID: -6465566751694194690, guid: 69c95a69bf60e4026b0ebf83c4c375da,
     type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -21,6 +21,5 @@ Material:
     serializedVersion: 3
     m_TexEnvs: []
     m_Floats:
-    - Vector1_4BB9B773: -0.076
-    - Vector1_745169EB: 0
+    - Boolean_9D45F75B: 1
     m_Colors: []

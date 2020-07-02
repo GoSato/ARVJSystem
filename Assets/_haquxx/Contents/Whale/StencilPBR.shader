@@ -5,7 +5,9 @@
         [NoScaleOffset]_BaseMap("_BaseMap", 2D) = "white" {}
         Color_7A0586C8("Color", Color) = (1, 1, 1, 0)
         [NoScaleOffset]Texture2D_B9573F8("_NormalMap", 2D) = "white" {}
-        _Mask ("Mask", int) = 1
+        Vector1_E62293F4("Metalic", Range(0, 1)) = 0
+        Vector1_BC1D51FA("Smoothness", Range(0, 1)) = 0.5
+        _Mask("Mask", int) = 1
     }
     SubShader
     {
@@ -95,6 +97,8 @@
             // Graph Properties
             CBUFFER_START(UnityPerMaterial)
             float4 Color_7A0586C8;
+            float Vector1_E62293F4;
+            float Vector1_BC1D51FA;
             CBUFFER_END
             TEXTURE2D(_BaseMap); SAMPLER(sampler_BaseMap); float4 _BaseMap_TexelSize;
             TEXTURE2D(Texture2D_B9573F8); SAMPLER(samplerTexture2D_B9573F8); float4 Texture2D_B9573F8_TexelSize;
@@ -145,11 +149,13 @@
                 float _SampleTexture2D_334ED59E_G_5 = _SampleTexture2D_334ED59E_RGBA_0.g;
                 float _SampleTexture2D_334ED59E_B_6 = _SampleTexture2D_334ED59E_RGBA_0.b;
                 float _SampleTexture2D_334ED59E_A_7 = _SampleTexture2D_334ED59E_RGBA_0.a;
+                float _Property_9AC6D59E_Out_0 = Vector1_E62293F4;
+                float _Property_6C916C40_Out_0 = Vector1_BC1D51FA;
                 surface.Albedo = (_Multiply_CC49A7AB_Out_2.xyz);
                 surface.Normal = (_SampleTexture2D_334ED59E_RGBA_0.xyz);
                 surface.Emission = IsGammaSpace() ? float3(0, 0, 0) : SRGBToLinear(float3(0, 0, 0));
-                surface.Metallic = 0;
-                surface.Smoothness = 0.5;
+                surface.Metallic = _Property_9AC6D59E_Out_0;
+                surface.Smoothness = _Property_6C916C40_Out_0;
                 surface.Occlusion = 1;
                 surface.Alpha = 1;
                 surface.AlphaClipThreshold = 0.5;
@@ -388,6 +394,8 @@
             // Graph Properties
             CBUFFER_START(UnityPerMaterial)
             float4 Color_7A0586C8;
+            float Vector1_E62293F4;
+            float Vector1_BC1D51FA;
             CBUFFER_END
             TEXTURE2D(_BaseMap); SAMPLER(sampler_BaseMap); float4 _BaseMap_TexelSize;
             TEXTURE2D(Texture2D_B9573F8); SAMPLER(samplerTexture2D_B9573F8); float4 Texture2D_B9573F8_TexelSize;
@@ -590,6 +598,8 @@
             // Graph Properties
             CBUFFER_START(UnityPerMaterial)
             float4 Color_7A0586C8;
+            float Vector1_E62293F4;
+            float Vector1_BC1D51FA;
             CBUFFER_END
             TEXTURE2D(_BaseMap); SAMPLER(sampler_BaseMap); float4 _BaseMap_TexelSize;
             TEXTURE2D(Texture2D_B9573F8); SAMPLER(samplerTexture2D_B9573F8); float4 Texture2D_B9573F8_TexelSize;
@@ -796,6 +806,8 @@
             // Graph Properties
             CBUFFER_START(UnityPerMaterial)
             float4 Color_7A0586C8;
+            float Vector1_E62293F4;
+            float Vector1_BC1D51FA;
             CBUFFER_END
             TEXTURE2D(_BaseMap); SAMPLER(sampler_BaseMap); float4 _BaseMap_TexelSize;
             TEXTURE2D(Texture2D_B9573F8); SAMPLER(samplerTexture2D_B9573F8); float4 Texture2D_B9573F8_TexelSize;
@@ -1026,6 +1038,8 @@
             // Graph Properties
             CBUFFER_START(UnityPerMaterial)
             float4 Color_7A0586C8;
+            float Vector1_E62293F4;
+            float Vector1_BC1D51FA;
             CBUFFER_END
             TEXTURE2D(_BaseMap); SAMPLER(sampler_BaseMap); float4 _BaseMap_TexelSize;
             TEXTURE2D(Texture2D_B9573F8); SAMPLER(samplerTexture2D_B9573F8); float4 Texture2D_B9573F8_TexelSize;

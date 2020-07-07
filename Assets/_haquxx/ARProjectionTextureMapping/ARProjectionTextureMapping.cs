@@ -14,6 +14,41 @@ namespace ARVJ
 
         private bool _initialized = false;
 
+        private Texture2D _texture;
+        public Texture2D Texture
+        {
+            get { return _texture; }
+            private set { _texture = value; }
+        }
+
+        private float _scaleFacXa;
+        public float ScaleFacXa
+        {
+            get { return _scaleFacXa; }
+            private set { _scaleFacXa = value; }
+        }
+
+        private float _scaleFacYa;
+        public float ScaleFacYa
+        {
+            get { return _scaleFacYa; }
+            private set { _scaleFacYa = value; }
+        }
+
+        private float _scaleFacXb;
+        public float ScaleFacXb
+        {
+            get { return _scaleFacXb; }
+            private set { _scaleFacXb = value; }
+        }
+
+        private float _scaleFacYb;
+        public float ScaleFacYb
+        {
+            get { return _scaleFacYb; }
+            private set { _scaleFacYb = value; }
+        }
+
         private void Start()
         {
             _arBackgroundImage.OnCameraUpdate += UpdateCameraImage;
@@ -45,6 +80,7 @@ namespace ARVJ
             {
                 Init(tex);
             }
+            _texture = tex;
             _mat.SetTexture("_MainTex", tex);
         }
 
@@ -94,6 +130,11 @@ namespace ARVJ
             _mat.SetFloat("_ScaleFacYa", ScaleFacYa);
             _mat.SetFloat("_ScaleFacXb", ScaleFacXb);
             _mat.SetFloat("_ScaleFacYb", ScaleFacYb);
+
+            _scaleFacXa = ScaleFacXa;
+            _scaleFacYa = ScaleFacYa;
+            _scaleFacXb = ScaleFacXb;
+            _scaleFacYb = ScaleFacYb;
         }
     }
 }

@@ -95,6 +95,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_haquxx/Contents/Statue/Statue_01.unity
     guid: cf4f684febb0249459ed797bad5d0898
+  - enabled: 1
+    path: Assets/_haquxx/Contents/OOH/OOH.unity
+    guid: 3ed6e1a84fadb4096bd4b99a8024df31
+  - enabled: 1
+    path: Assets/_haquxx/Contents/Whirlpool/Whirlpool.unity
+    guid: e4a0eb019a88945a483e8ac45476d245
+  - enabled: 1
+    path: Assets/_haquxx/Contents/ProjectionTextureMapping/ProjectionTest.unity
+    guid: 62e850e904da241f1ac7b13cbb142610
   m_configObjects:
     com.unity.xr.arkit.PlayerSettings: {fileID: 11400000, guid: 2d5fb8e61571b4e3897f221189089fd6,
       type: 2}

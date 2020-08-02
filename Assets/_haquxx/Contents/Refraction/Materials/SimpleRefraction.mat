@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SimpleRefraction
+  m_Shader: {fileID: -6465566751694194690, guid: 4e49e50fda9084beb9efd3854a9cf5eb,
+    type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs: []
+    m_Floats:
+    - Vector1_403C757F: 3.51
+    - Vector1_7DE8CEB5: 1.73
+    - Vector1_954FCE4F: 1.222
+    - Vector1_AAA25D3C: 0
+    - Vector1_BF74A3A1: 1
+    - Vector1_D8BE3CDE: 0
+    m_Colors: []

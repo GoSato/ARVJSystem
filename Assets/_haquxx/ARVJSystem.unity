@@ -99,7 +99,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: 4d0ed9b6b35e9448190613aa14aa4c59,
     type: 2}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1373,12 +1373,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 2732, y: 2048}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -3121,7 +3121,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2796a4140e019490a917a7d549150eb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mat: {fileID: 2100000, guid: 2cd5e89060b7b46ada6d35fa3ffc7594, type: 2}
   _arBackgroundImage: {fileID: 644181455}
 --- !u!114 &644181455
 MonoBehaviour:
@@ -5225,7 +5224,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 2732, y: 2048}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -5893,7 +5892,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 2732, y: 2048}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -10245,7 +10244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce5519d8beee84d1ab2789b1d7a3b370, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _scene: Triangle_01
+  _scene: 06_explosion
   _toggle: {fileID: 2143724252}
 --- !u!1001 &3811591508619061747
 PrefabInstance:

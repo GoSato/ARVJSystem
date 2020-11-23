@@ -7,9 +7,6 @@ namespace ARVJ
     public class ARProjectionTextureMapping : MonoBehaviour
     {
         [SerializeField]
-        private Material _mat;
-
-        [SerializeField]
         private ARBackgroundImage _arBackgroundImage;
 
         private bool _initialized = false;
@@ -65,13 +62,7 @@ namespace ARVJ
 
             Vector2 textureSize = new Vector2(tex.width, tex.height);
 
-            float ScaleFacYa = 0.0f;
-            float ScaleFacYb = 0.0f;
-            float ScaleFacXa = 0.0f;
-            float ScaleFacXb = 0.0f;
-
-            CalculateShaderUVMapping(out ScaleFacYa, out ScaleFacYb, out ScaleFacXa, out ScaleFacXb, textureSize, Screen.width, Screen.height);
-            SetShaderUVMapping(ScaleFacYa, ScaleFacYb, ScaleFacXa, ScaleFacXb);
+            CalculateShaderUVMapping(textureSize, Screen.width, Screen.height);
         }
 
         private void UpdateCameraImage(Texture2D tex)
@@ -81,10 +72,9 @@ namespace ARVJ
                 Init(tex);
             }
             _texture = tex;
-            _mat.SetTexture("_MainTex", tex);
         }
 
-        public void CalculateShaderUVMapping(out float ScaleFacYa, out float ScaleFacYb, out float ScaleFacXa, out float ScaleFacXb, Vector2 textureSize, float screenWidth, float screenHeight)
+        public void CalculateShaderUVMapping(Vector2 textureSize, float screenWidth, float screenHeight)
         {
 
             float cameraTextureAspect = textureSize.y / textureSize.x;
@@ -121,20 +111,6 @@ namespace ARVJ
                 ScaleFacYa = 0.5f;
                 ScaleFacYb = 0.5f;
             }
-        }
-
-
-        public void SetShaderUVMapping(float ScaleFacYa, float ScaleFacYb, float ScaleFacXa, float ScaleFacXb)
-        {
-            _mat.SetFloat("_ScaleFacXa", ScaleFacXa);
-            _mat.SetFloat("_ScaleFacYa", ScaleFacYa);
-            _mat.SetFloat("_ScaleFacXb", ScaleFacXb);
-            _mat.SetFloat("_ScaleFacYb", ScaleFacYb);
-
-            _scaleFacXa = ScaleFacXa;
-            _scaleFacYa = ScaleFacYa;
-            _scaleFacXb = ScaleFacXb;
-            _scaleFacYb = ScaleFacYb;
         }
     }
 }
